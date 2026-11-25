@@ -1,6 +1,9 @@
 # CreditRisk-India: Explainable Personal Loan Default Scoring Engine
 ### Cost-Sensitive Underwriting, Multi-Model Benchmarking & SHAP Explainability (2026)
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://credit-risk-scoring-india.streamlit.app/)
+**Live Demo:** https://credit-risk-scoring-india.streamlit.app/
+
 ---
 
 ## Project Overview
