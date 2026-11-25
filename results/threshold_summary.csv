@@ -1,0 +1,2 @@
+model,threshold_max_f1,f1_at_opt_f1,recall_at_opt_f1,precision_at_opt_f1,threshold_min_cost,cost_at_opt_cost,recall_at_opt_cost,baseline_cost_at_0.50
+Logistic Regression,0.79,0.4249,0.4886,0.3759,0.694,1017.0,0.6352,1314.0

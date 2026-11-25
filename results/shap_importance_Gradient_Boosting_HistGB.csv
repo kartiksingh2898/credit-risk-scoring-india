@@ -1,0 +1,60 @@
+Feature,Mean_SHAP
+cibil_score,0.8189914457994389
+late_payments_last_12m,0.20885096540920078
+total_obligations_ratio,0.18836113394661827
+emi_to_income_ratio,0.1508478500192915
+interest_rate_offered_pct,0.1506797798763221
+collateral_provided_No,0.1307942943292587
+credit_hunger_index,0.11386477566982368
+loan_to_annual_income_ratio,0.0819777823677366
+existing_emi_monthly_inr,0.07390859767849532
+loan_amount_requested_inr,0.06708653786924487
+credit_utilization_ratio_pct,0.06452310414415029
+bank_account_vintage_years,0.05976717927022429
+monthly_income_inr,0.058311421206206714
+employment_type_Business Owner,0.04589817465900637
+installment_to_income_ratio,0.03958184625138143
+estimated_monthly_installment,0.03854676052518971
+age,0.030443129240119656
+collateral_provided_Yes,0.021631107643433355
+loan_tenure_months,0.02102762827367972
+employment_type_Salaried - PSU,0.013109033801145989
+loan_purpose_Personal Expense,0.01220937528495253
+existing_loans_count,0.01120776924037504
+state_Punjab,0.009454593957518248
+loan_purpose_Wedding,0.008156294507134558
+marital_status_Divorced,0.0074350039054080054
+loan_purpose_Home Renovation,0.0068942496159692555
+state_Uttar Pradesh,0.006832484848210542
+employment_type_Salaried - Private,0.006602631342468177
+city_tier_Tier 1,0.005825277576038203
+marital_status_Single,0.005740017928258927
+employment_type_Salaried - Government,0.00544077708619172
+loan_purpose_Medical Emergency,0.005422957627675522
+city_tier_Tier 3,0.0053934610502390104
+state_Rajasthan,0.004794031428989676
+state_Madhya Pradesh,0.004773405693470955
+city_tier_Tier 2,0.004370271953323174
+loan_purpose_Vehicle Purchase,0.004232048113315791
+state_Delhi NCR,0.00376830135199212
+loan_purpose_Business Expansion,0.003761343991645563
+state_Andhra Pradesh,0.00339695460853552
+gender_Male,0.0029773515326695045
+gender_Female,0.002897837055984205
+state_Bihar,0.002750371650693729
+state_Karnataka,0.0025231533935214673
+gender_Other,0.002030652193619197
+loan_purpose_Debt Consolidation,0.001996634656981582
+marital_status_Widowed,0.0019891466540773446
+marital_status_Married,0.001953613098693315
+num_credit_inquiries_last_6m,0.0019141884646806497
+state_Tamil Nadu,0.0019027565302107763
+state_Kerala,0.0018377842315189115
+state_Telangana,0.0017969474952782003
+loan_purpose_Education,0.0014442356193585348
+state_Gujarat,0.0013470685209008753
+state_Haryana,0.0005936819782933205
+state_West Bengal,0.0004718761485575191
+employment_type_Self-Employed Professional,0.0003413401495015557
+state_Maharashtra,0.00030638376468296926
+cibil_band_code,0.0

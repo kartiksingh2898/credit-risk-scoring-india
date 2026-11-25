@@ -1,0 +1,60 @@
+Feature,Mean_SHAP
+cibil_score,0.11399587829914853
+late_payments_last_12m,0.047638484450495414
+total_obligations_ratio,0.03787032920257014
+emi_to_income_ratio,0.03398535636405219
+credit_utilization_ratio_pct,0.03114527760988062
+credit_hunger_index,0.029644388163239933
+cibil_band_code,0.02951359474615478
+interest_rate_offered_pct,0.028319382306381563
+collateral_provided_No,0.013029681250771618
+loan_to_annual_income_ratio,0.012000292201127112
+collateral_provided_Yes,0.011254990562101068
+bank_account_vintage_years,0.01027433742056091
+existing_emi_monthly_inr,0.00912081207340244
+loan_amount_requested_inr,0.008966482308735728
+monthly_income_inr,0.007976137621439233
+installment_to_income_ratio,0.007946189185005448
+estimated_monthly_installment,0.0068992180467725124
+age,0.005839566280642353
+loan_tenure_months,0.004311613093784236
+existing_loans_count,0.00331802992456465
+num_credit_inquiries_last_6m,0.003050589446922378
+employment_type_Business Owner,0.0018113658274963081
+city_tier_Tier 2,0.0015282320105427891
+employment_type_Salaried - PSU,0.0014760820071237856
+employment_type_Salaried - Private,0.001473789682169524
+employment_type_Self-Employed Professional,0.001288604380969689
+gender_Female,0.0012117197433510847
+city_tier_Tier 1,0.0011932905938058461
+loan_purpose_Home Renovation,0.0011815453068550034
+loan_purpose_Personal Expense,0.0011301093841062414
+gender_Male,0.0010978762961866336
+city_tier_Tier 3,0.0010859329208076736
+marital_status_Single,0.0010555158169661398
+loan_purpose_Medical Emergency,0.001029169939289288
+marital_status_Married,0.0010244378797256478
+loan_purpose_Wedding,0.0008138582570286886
+state_Madhya Pradesh,0.0007402978651715808
+state_Kerala,0.0006835310030133546
+state_Gujarat,0.0006712496906322857
+employment_type_Salaried - Government,0.0006595307528168119
+loan_purpose_Education,0.0006591906058640419
+state_Punjab,0.0006574985401106854
+state_Karnataka,0.0006558639716276877
+state_Bihar,0.0006295836140699765
+marital_status_Divorced,0.0006201810169360753
+state_West Bengal,0.0006173540594553748
+state_Andhra Pradesh,0.0006023387624027533
+state_Rajasthan,0.0005915468138083272
+loan_purpose_Vehicle Purchase,0.000573796499718808
+loan_purpose_Business Expansion,0.000553012159104884
+loan_purpose_Debt Consolidation,0.0005496782923093353
+state_Tamil Nadu,0.000529409813399792
+state_Telangana,0.0005231948890729569
+state_Haryana,0.0005104841613818289
+state_Maharashtra,0.0005090941086147581
+gender_Other,0.00048482936653950105
+state_Delhi NCR,0.0004821222642440972
+state_Uttar Pradesh,0.00046713014226447836
+marital_status_Widowed,0.00031484921326429513
