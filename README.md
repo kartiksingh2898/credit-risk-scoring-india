@@ -179,30 +179,7 @@ All preprocessing (imputation, encoding, scaling) is wrapped in a `sklearn.Pipel
 
 ---
 
-## CV Resume Bullets
 
-```
-Credit Risk Scoring & Multi-Model Benchmarking Engine  |  Python, Scikit-Learn, SHAP, Streamlit
-
-• Built an end-to-end credit risk pipeline on 25,000 Indian personal loan records,
-  benchmarking 4 model families (Logistic Regression, Decision Tree, Random Forest,
-  Gradient Boosting) across ROC-AUC, PR-AUC, Recall, Precision, and inference latency.
-
-• Engineered 7 Indian banking-standard financial ratios (FOIR, Loan-to-Income, Credit Hunger
-  Index, CIBIL banding) using leakage-free ColumnTransformer pipelines fitted exclusively
-  on training folds.
-
-• Addressed severe class imbalance (~6.1% default rate) with class-weighting and cost-sensitive
-  threshold tuning, reducing simulated default-related financial losses vs. the default 0.50 cutoff.
-
-• Applied SHAP TreeExplainer for global feature attribution and individual applicant explanations,
-  identifying CIBIL score, credit utilisation, and FOIR as the top three default drivers.
-
-• Deployed an interactive Streamlit risk-scoring dashboard supporting real-time applicant input,
-  model switching, and dynamic threshold adjustment.
-```
-
----
 
 ## Tech Stack
 
@@ -227,4 +204,4 @@ Credit Risk Scoring & Multi-Model Benchmarking Engine  |  Python, Scikit-Learn, 
 
 ---
 
-*Built by Kartik Kumar Singh — Placement Portfolio Project, 2026*
+*Built by Kartik Kumar Singh *
