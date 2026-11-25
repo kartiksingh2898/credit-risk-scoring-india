@@ -100,14 +100,18 @@ streamlit run app.py
 - **Stratified 80/20 split before any imputation or scaling** (leakage prevention)
 - Winsorization of skewed monetary columns fit on training data, applied to both sets
 
-### 3. Exploratory Data Analysis
-Six focused business-insight charts:
-1. Default rate by CIBIL score band
-2. Default rate by employment type & city tier
-3. Loan amount & income distributions by default status
-4. Credit utilisation vs late payments scatter (coloured by default)
-5. Interest rate by CIBIL band and default status
-6. Correlation heatmap of numerical features
+### 3. Exploratory Data Analysis — Key Visual Findings
+
+Six business-focused analyses were run on 25,000 borrower profiles; the two strongest underwriting signals are shown below:
+
+<p align="center">
+  <img src="results/eda_01_cibil_default_rate.png" alt="Default Rate by CIBIL Score Band" width="49%" />
+  <img src="results/eda_05_interest_rate_cibil.png" alt="Interest Rate vs Default by CIBIL Band" width="49%" />
+</p>
+
+- **CIBIL Score Dominates Risk:** `Poor (<650)` borrowers default at a sharply higher rate than `Excellent (750+)` borrowers, validating bureau score as the primary underwriting anchor.
+- **Risk-Based Pricing Signal:** Even within the *same* CIBIL band, eventual defaulters were offered higher median interest rates — confirming coherent economic signal in the dataset.
+- **Behavioural & Income-Burden Clustering:** High credit utilization paired with recent late payments strongly co-occurs with default (`results/eda_04_utilization_late_payments.png`), motivating our engineered **FOIR** and **Credit Hunger Index** features.
 
 ### 4. Feature Engineering (Indian Banking Ratios)
 
@@ -166,9 +170,14 @@ All preprocessing (imputation, encoding, scaling) is wrapped in a `sklearn.Pipel
 | **Random Forest** | 0.8667 | 0.3371 | 0.5961 | **0.2942** | **0.3940** | 0.65s |
 | Gradient Boosting (HistGB) | 0.8719 | 0.3726 | 0.1433 | **0.6567** | 0.2353 | 3.04s |
 
-**Best by PR-AUC**: Logistic Regression (0.3832) — highest minority-class ranking under 6.1% imbalance.  
+**Best by PR-AUC**: Logistic Regression (0.3832) — highest minority-class ranking under 6.1% imbalance (6.2x random baseline).  
 **Best by F1**: Random Forest (0.3940) — best balance between precision and recall.  
-**Best Precision**: Gradient Boosting (0.6567) — fewest false alarms but misses many defaulters at 0.50 threshold.
+**Best Precision**: Gradient Boosting (0.6567) — fewest false alarms, though conservative at the default 0.50 cutoff.
+
+<p align="center">
+  <img src="results/roc_curves.png" alt="ROC Curves Multi-Model Benchmark" width="49%" />
+  <img src="results/pr_curves.png" alt="Precision-Recall Curves Multi-Model Benchmark" width="49%" />
+</p>
 
 ### Threshold Optimisation Results (Logistic Regression)
 
@@ -178,7 +187,21 @@ All preprocessing (imputation, encoding, scaling) is wrapped in a `sklearn.Pipel
 | **Max F1** | **0.79** | 0.4886 | **0.3759** | **0.4249** | — |
 | **Min Cost** | **0.694** | — | — | — | **1017 (↓22.6%)** |
 
-> Moving from default 0.50 → cost-optimal 0.694 threshold **reduces business losses by ~22.6%**.
+> Moving from default `0.50` -> cost-optimal `0.694` threshold **reduces simulated business losses by 22.6%** under a 5:1 False-Negative to False-Positive cost matrix.
+
+<p align="center">
+  <img src="results/threshold_analysis_Logistic_Regression.png" alt="Cost-Sensitive Threshold Optimization" width="92%" />
+</p>
+
+### SHAP Explainability — Global & Individual Auditability
+
+<p align="center">
+  <img src="results/shap_beeswarm_Random_Forest.png" alt="SHAP Beeswarm Global Risk Drivers" width="49%" />
+  <img src="results/shap_waterfall_Random_Forest_HighRisk_TP.png" alt="SHAP Waterfall High-Risk Applicant" width="49%" />
+</p>
+
+- **Global Policy Drivers (Left):** `cibil_score`, `late_payments_last_12m`, `total_obligations_ratio` (FOIR), `emi_to_income_ratio`, and `credit_utilization_ratio_pct` are the top 5 risk drivers.
+- **Individual Adverse-Action Reasons (Right):** Waterfall attribution explains *exactly* which borrower ratios pushed a specific high-risk applicant above the approval cutoff.
 
 ---
 
